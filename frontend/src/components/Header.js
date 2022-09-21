@@ -1,7 +1,9 @@
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+// import { Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
+import SearchBox from "./SearchBox";
 // import Container from "react-bootstrap/Container";
 // import Nav from "react-bootstrap/Nav";
 // import Navbar from "react-bootstrap/Navbar";
@@ -25,6 +27,8 @@ const Header = () => {
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            {/* <Route render={() => <SearchBox />} />    <-- THIS CODE WAS EARLIEAR WITH RRD5 */}
+            <SearchBox />
             <Nav className="ml-auto">
               <LinkContainer to="/cart">
                 <Nav.Link>
